@@ -1,0 +1,65 @@
+PARSER_BEGIN(Rust)
+import java.io.*;
+class Rust 
+{
+	public static void main( String[] args )throws ParseException, Exception
+	{
+		Rust lex = new Rust(new FileInputStream(args[0]));
+		lex.AnaliseLexica();
+
+	}
+}
+PARSER_END(Rust)
+
+
+TOKEN:
+{
+	  <FN: "fn"> 
+	| <MAIN: "main">
+	| <PRINTLN: "println!" >
+}
+TOKEN:
+{
+      <APAREN: "(" >
+	| <FPAREN: ")" >
+	| <ACHAVES: "{" >
+	| <FCHAVES: "}" >
+	| <ACOLCHETE: "[" >
+	| <FCOLCHETE: "]" >
+	| <PONTOVIRGULA: ";" >
+	| <VIRGULA: "," >
+	| <PONTO: "." >
+	| <ASPASDUPLAS: "\"">
+}
+
+TOKEN:
+{
+	  <NUM : (["0"-"9"])+>
+	| <DECIMAL : (["0"-"9"])+["."](["0"-"9"])+ >
+	| <CADEIA : <ASPASDUPLAS>["a"-"z","A"-"Z","0"-"9"," "](["a"-"z","A"-"Z","0"-"9"," ",":",";","."])*<ASPASDUPLAS>>
+	| <CARACTERE : "'"["a"-"z","A"-"Z","0"-"9"]"'" >
+	| <DOISPONTOS : ":">
+}
+
+SKIP : 
+{ 
+	" " | "\n" | "\r" | "\t"
+}
+
+void AnaliseLexica() :
+{Token t;}
+{
+	(
+			<FN> 			{System.out.println(">> PALAVRA RESERVADA: fn");}
+		|	<MAIN> 	  		{System.out.println(">> PALAVRA RESERVADA: main");}
+		|	<PRINTLN> 		{System.out.println(">> PALAVRA RESERVADA: println!");}
+		| t=<CADEIA> 	    {System.out.println(">> CADEIA DE CARACTERES: " + t.image);}
+		|	<ASPASDUPLAS> 	{System.out.println(">> ASPAS DUPLAS: \"");}
+		|	<PONTOVIRGULA> 	{System.out.println(">> PONTO E VIRGULA: ;");}
+		|	<ACHAVES>		{System.out.println(">> ABRE CHAVES: {");}
+		|	<FCHAVES>		{System.out.println(">> FECHA CHAVES: }");}
+		|	<APAREN> 		{System.out.println(">> ABRE PARENTESES: (");}
+		|	<FPAREN> 		{System.out.println(">> FECHA PARENTESES: )");}
+		| t=<NUM>			{System.out.println(">> NUMERO: " + t.image);}
+	)*
+}
