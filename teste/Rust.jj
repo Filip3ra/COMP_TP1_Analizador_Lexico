@@ -20,6 +20,10 @@ class Rust
 	// [ ]
 	// Qual asnixxx tem no rust? tomar cuidado pra não fazer mais do que se pede no trabalho!!!!
 
+	// [ ]
+	// mostrar no vídeo o manual, o que eu fiz, comparar, descrever o código
+	// mostra o código, fiz isso por que no manual tem isso e etc
+
 }
 PARSER_END(Rust)
 

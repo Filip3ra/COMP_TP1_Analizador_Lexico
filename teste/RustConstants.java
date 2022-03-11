@@ -35,25 +35,15 @@ public interface RustConstants {
   /** RegularExpression Id. */
   int ASPASDUPLAS = 13;
   /** RegularExpression Id. */
-  int INT = 14;
+  int NUM = 14;
   /** RegularExpression Id. */
-  int DEC = 15;
+  int DECIMAL = 15;
   /** RegularExpression Id. */
-  int CHR = 16;
+  int CADEIA = 16;
   /** RegularExpression Id. */
-  int STR = 17;
+  int CARACTERE = 17;
   /** RegularExpression Id. */
-  int NUM = 18;
-  /** RegularExpression Id. */
-  int IDENTIFIER = 19;
-  /** RegularExpression Id. */
-  int DECIMAL = 20;
-  /** RegularExpression Id. */
-  int CADEIA = 21;
-  /** RegularExpression Id. */
-  int CARACTERE = 22;
-  /** RegularExpression Id. */
-  int DOISPONTOS = 23;
+  int DOISPONTOS = 18;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -74,12 +64,7 @@ public interface RustConstants {
     "\",\"",
     "\".\"",
     "\"\\\"\"",
-    "\"int\"",
-    "\"idec\"",
-    "\"ichr\"",
-    "\"istr\"",
     "<NUM>",
-    "<IDENTIFIER>",
     "<DECIMAL>",
     "<CADEIA>",
     "<CARACTERE>",

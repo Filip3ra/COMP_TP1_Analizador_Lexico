@@ -99,7 +99,7 @@ class Rust implements RustConstants {
       jj_la1_init_0();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0x2424fe,0x2424fe,};
+      jj_la1_0 = new int[] {0x164fe,0x164fe,};
    }
 
   /** Constructor with InputStream. */
@@ -237,7 +237,7 @@ class Rust implements RustConstants {
   /** Generate ParseException. */
   static public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[28];
+    boolean[] la1tokens = new boolean[23];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -251,7 +251,7 @@ class Rust implements RustConstants {
         }
       }
     }
-    for (int i = 0; i < 28; i++) {
+    for (int i = 0; i < 23; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;
@@ -272,5 +272,16 @@ class Rust implements RustConstants {
   /** Disable tracing. */
   static final public void disable_tracing() {
   }
+
+        // [ ]
+        // Sobre caracteres especiais como '!', tem que tratar fora do a-z, e ler o manual da linguagem pra saber
+        // tudo que pode ser inserido numa string.
+
+        // [OK]
+        // A impressão é por saída padrão, então o algoritmo vai ler o arquivo com um código em Rust,
+        // após isso ele identifica cada token.
+
+        // [ ]
+        // Qual asnixxx tem no rust? tomar cuidado pra não fazer mais do que se pede no trabalho!!!!
 
 }
