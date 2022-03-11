@@ -8,6 +8,18 @@ class Rust
 		lex.AnaliseLexica();
 
 	}
+
+	// [ ]
+	// Sobre caracteres especiais como '!', tem que tratar fora do a-z, e ler o manual da linguagem pra saber
+	// tudo que pode ser inserido numa string.
+
+	// [OK]
+	// A impressão é por saída padrão, então o algoritmo vai ler o arquivo com um código em Rust,
+	// após isso ele identifica cada token.
+
+	// [ ]
+	// Qual asnixxx tem no rust? tomar cuidado pra não fazer mais do que se pede no trabalho!!!!
+
 }
 PARSER_END(Rust)
 
@@ -36,7 +48,7 @@ TOKEN:
 {
 	  <NUM : (["0"-"9"])+>
 	| <DECIMAL : (["0"-"9"])+["."](["0"-"9"])+ >
-	| <CADEIA : <ASPASDUPLAS>["a"-"z","A"-"Z","0"-"9"," "](["a"-"z","A"-"Z","0"-"9"," ",":",";","."])*<ASPASDUPLAS>>
+	| <CADEIA : <ASPASDUPLAS>["a"-"z","A"-"Z","0"-"9"," "](["a"-"z","A"-"Z","0"-"9"," ",":",";",".","!","@","#","$","%","&","*"])*<ASPASDUPLAS>>
 	| <CARACTERE : "'"["a"-"z","A"-"Z","0"-"9"]"'" >
 	| <DOISPONTOS : ":">
 }
