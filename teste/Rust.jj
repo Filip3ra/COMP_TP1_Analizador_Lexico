@@ -109,14 +109,21 @@ TOKEN:
 {
 	  <KW_UNION : "union">
 	| <KW_STATICLIFETIME : "'static"">
-	| <KW_DYN : "dyn">
 }
+
+/************
+ *  MACROS  *
+ ************/
+TOKEN:
+{
+	  <PRINTLN: "println!" >
+}
+
 
 TOKEN:
 {
 	  <FN: "fn"> 
 	| <MAIN: "main">
-	| <PRINTLN: "println!" >
 }
 
 
@@ -198,6 +205,7 @@ TOKEN:
 	| <DECIMAL : (["0"-"9"])+["."](["0"-"9"])+ >
 	| <CADEIA : <ASPASDUPLAS>["a"-"z","A"-"Z","0"-"9"," "](["a"-"z","A"-"Z","0"-"9"," ",":",";",".","!","@","#","$","%","&","*"])*<ASPASDUPLAS>>
 	| <CARACTERE : "'"["a"-"z","A"-"Z","0"-"9"]"'" >
+	| <IDENTIFICADOR : ["a"-"z","A"-"Z"](["a"-"z","A"-"Z","0"-"9","_"])*> 
 }
 
 
@@ -213,16 +221,126 @@ void AnaliseLexica() :
 {Token t;}
 {
 	(
-			<KW_FN> 		{System.out.println(">> PALAVRA RESERVADA: fn");}
-		|	<MAIN> 	  		{System.out.println(">> PALAVRA RESERVADA: main");}
-		|	<PRINTLN> 		{System.out.println(">> PALAVRA RESERVADA: println!");}
-		| t=<CADEIA> 	    {System.out.println(">> CADEIA DE CARACTERES: " + t.image);}
-		|	<ASPASDUPLAS> 	{System.out.println(">> ASPAS DUPLAS: \"");}
-		|	<PONTOVIRGULA> 	{System.out.println(">> PONTO E VIRGULA: ;");}
-		|	<ACHAVES>		{System.out.println(">> DELIMITADOR: {");}
-		|	<FCHAVES>		{System.out.println(">> DELIMITADOR: }");}
-		|	<APAREN> 		{System.out.println(">> DELIMITADOR: (");}
-		|	<FPAREN> 		{System.out.println(">> DELIMITADOR: )");}
-		| t=<NUM>			{System.out.println(">> NUMERO: " + t.image);}
+		  <KW_AS>			{System.out.println("PALAVRAS RESERVADAS STRICT: as");}
+		| <KW_BREAK>		{System.out.println("PALAVRAS RESERVADAS STRICT: break");}
+		| <KW_CONST>		{System.out.println("PALAVRAS RESERVADAS STRICT: const");}
+		| <KW_CONTINUE>		{System.out.println("PALAVRAS RESERVADAS STRICT: continue");}
+		| <KW_CRATE>		{System.out.println("PALAVRAS RESERVADAS STRICT: crate");}
+		| <KW_ELSE>			{System.out.println("PALAVRAS RESERVADAS STRICT: else");}
+		| <KW_ENUM> 		{System.out.println("PALAVRAS RESERVADAS STRICT: enum");}
+		| <KW_EXTERN> 		{System.out.println("PALAVRAS RESERVADAS STRICT: extern");}
+		| <KW_FALSE>		{System.out.println("PALAVRAS RESERVADAS STRICT: false");}
+		| <KW_FN> 			{System.out.println("PALAVRAS RESERVADAS STRICT: fn");}
+		| <KW_FOR>			{System.out.println("PALAVRAS RESERVADAS STRICT: for");}
+		| <KW_IF>			{System.out.println("PALAVRAS RESERVADAS STRICT: if");}
+		| <KW_IMPL>			{System.out.println("PALAVRAS RESERVADAS STRICT: impl");}
+		| <KW_IN>			{System.out.println("PALAVRAS RESERVADAS STRICT: in");}
+		| <KW_LET>			{System.out.println("PALAVRAS RESERVADAS STRICT: let");}
+		| <KW_LOOP>			{System.out.println("PALAVRAS RESERVADAS STRICT: loop");}
+		| <KW_MATCH>		{System.out.println("PALAVRAS RESERVADAS STRICT: match");}
+		| <KW_MOD>			{System.out.println("PALAVRAS RESERVADAS STRICT: mod");}
+		| <KW_MOVE>			{System.out.println("PALAVRAS RESERVADAS STRICT: move");}
+		| <KW_MUT>			{System.out.println("PALAVRAS RESERVADAS STRICT: mut");}
+		| <KW_PUB>			{System.out.println("PALAVRAS RESERVADAS STRICT: pub");}
+		| <KW_REF>			{System.out.println("PALAVRAS RESERVADAS STRICT: ref");}
+		| <KW_RETURN>		{System.out.println("PALAVRAS RESERVADAS STRICT: return");}
+		| <KW_SELFVALUE>	{System.out.println("PALAVRAS RESERVADAS STRICT: self");}
+		| <KW_SELFTYPE>		{System.out.println("PALAVRAS RESERVADAS STRICT: Self");}
+		| <KW_STATIC>		{System.out.println("PALAVRAS RESERVADAS STRICT: static");}
+		| <KW_STRUCT>		{System.out.println("PALAVRAS RESERVADAS STRICT: struct");}
+		| <KW_SUPER>		{System.out.println("PALAVRAS RESERVADAS STRICT: super");}
+		| <KW_TRAIT>		{System.out.println("PALAVRAS RESERVADAS STRICT: trait");}
+		| <KW_TRUE>			{System.out.println("PALAVRAS RESERVADAS STRICT: true");}
+		| <KW_TYPE>			{System.out.println("PALAVRAS RESERVADAS STRICT: type");}
+		| <KW_UNSAFE>		{System.out.println("PALAVRAS RESERVADAS STRICT: unsafe");}
+		| <KW_USE>			{System.out.println("PALAVRAS RESERVADAS STRICT: use");}
+		| <KW_WHERE>		{System.out.println("PALAVRAS RESERVADAS STRICT: where");}
+		| <KW_WHILE>		{System.out.println("PALAVRAS RESERVADAS STRICT: while");}
+		| <KW_ASYNC>		{System.out.println("PALAVRAS RESERVADAS STRICT: async");}
+		| <KW_AWAIT>		{System.out.println("PALAVRAS RESERVADAS STRICT: await");}
+		| <KW_DYN>			{System.out.println("PALAVRAS RESERVADAS STRICT: dyn");}
+
+		| <KW_ABSTRACT>		{System.out.println("PALAVRAS RESERVADAS RESERVED: abstract");}
+		| <KW_BECOME>		{System.out.println("PALAVRAS RESERVADAS RESERVED: become");}
+		| <KW_BOX>			{System.out.println("PALAVRAS RESERVADAS RESERVED: box");}
+		| <KW_DO>			{System.out.println("PALAVRAS RESERVADAS RESERVED: do");}
+		| <KW_FINAL>		{System.out.println("PALAVRAS RESERVADAS RESERVED: final");}
+		| <KW_MACRO>		{System.out.println("PALAVRAS RESERVADAS RESERVED: macro");}
+		| <KW_OVERRIDE>		{System.out.println("PALAVRAS RESERVADAS RESERVED: override");}
+		| <KW_PRIV>			{System.out.println("PALAVRAS RESERVADAS RESERVED: priv");}
+		| <KW_TYPEOF>		{System.out.println("PALAVRAS RESERVADAS RESERVED: typeof");}
+		| <KW_UNSIZED>		{System.out.println("PALAVRAS RESERVADAS RESERVED: unsized");}
+		| <KW_VIRTUAL>		{System.out.println("PALAVRAS RESERVADAS RESERVED: virtual");}
+		| <KW_YIELD>		{System.out.println("PALAVRAS RESERVADAS RESERVED: yield");}
+		| <KW_TRY>			{System.out.println("PALAVRAS RESERVADAS RESERVED: try");}
+
+		| <KW_UNION>		{System.out.println("PALAVRAS RESERVADAS WEAK: union");}
+		| <KW_STATICLIFETIME>{System.out.println("PALAVRAS RESERVADAS WEAK: 'static");}
+		
+		|	<PRINTLN> 		{System.out.println("MACRO: println!");}
+
+
+		|	<MAIN> 	  		{System.out.println("PONTUACAO: main");}
+
+
+		| <MAIS>			{System.out.println("PONTUACAO: +");}
+		| <MENOS>			{System.out.println("PONTUACAO: -");}
+		| <ESTRELA>			{System.out.println("PONTUACAO: *");}
+		| <BARRAINVERTIDA>	{System.out.println("PONTUACAO: /");}
+		| <PORCENTO>		{System.out.println("PONTUACAO: %");}
+		| <CHAPEU>			{System.out.println("PONTUACAO: ^");}
+		| <EXCLAMACAO>		{System.out.println("PONTUACAO: !");}
+		| <ECOMERCIAL>		{System.out.println("PONTUACAO: &");}
+		| <OU>				{System.out.println("PONTUACAO: |");}
+		| <ANDAND>			{System.out.println("PONTUACAO: &&");}
+		| <OUOU>			{System.out.println("PONTUACAO: ||");}
+		| <MENORMENOR>		{System.out.println("PONTUACAO: <<");}
+		| <MAIORMAIOR>		{System.out.println("PONTUACAO: >>");}
+		| <MAISIGUAL>		{System.out.println("PONTUACAO: +=");}
+		| <MENOSIGUAL>		{System.out.println("PONTUACAO: -=");}
+		| <ESTRELAIGUAL>	{System.out.println("PONTUACAO: *=");}
+		| <CONTRABARRAIGUAL>{System.out.println("PONTUACAO: /=");}
+		| <PORCENTOIGUAL>	{System.out.println("PONTUACAO: %=");}
+		| <CHAPEUIGUAL>		{System.out.println("PONTUACAO: ^=");}
+		| <ECOMERCIALIGUAL>	{System.out.println("PONTUACAO: &=");}
+		| <OUIGUAL>			{System.out.println("PONTUACAO: |=");}
+		| <MENORMENORIGUAL>	{System.out.println("PONTUACAO: <<=");}
+		| <MAIORMAIORIGUAL>	{System.out.println("PONTUACAO: >>=");}
+		| <IGUAL>			{System.out.println("PONTUACAO: =");}
+		| <IGUALIGUAL>		{System.out.println("PONTUACAO: ==");}
+		| <DIFERENTE>		{System.out.println("PONTUACAO: !=");}
+		| <MAIORQUE>		{System.out.println("PONTUACAO: >");}
+		| <MENORQUE>		{System.out.println("PONTUACAO: <");}
+		| <MAIOROUIGUAL>	{System.out.println("PONTUACAO: >=");}
+		| <MENOROUIGUAL>	{System.out.println("PONTUACAO: <=");}
+		| <ARROBA>			{System.out.println("PONTUACAO: @");}
+		| <UNDERLINE>		{System.out.println("PONTUACAO: _");}
+		| <PONTO>			{System.out.println("PONTUACAO: .");}
+		| <PONTOPONTO>		{System.out.println("PONTUACAO: ..");}
+		| <PONTOPONTOPONTO>	{System.out.println("PONTUACAO: ...");}
+		| <PONTOPONTOIGUAL>	{System.out.println("PONTUACAO: ..=");}
+		| <VIRGULA>			{System.out.println("PONTUACAO: ,");}
+		| <PONTOVIRGULA>	{System.out.println("PONTUACAO: ;");}
+		| <DOISPONTOS>		{System.out.println("PONTUACAO: :");}
+		| <DUPLODOISPONTOS>	{System.out.println("PONTUACAO: ::");}
+		| <SETA>			{System.out.println("PONTUACAO: ->");}
+		| <SETAGORDA>		{System.out.println("PONTUACAO: =>");}
+		| <QUADRADO>		{System.out.println("PONTUACAO: #");}
+		| <CIFRAO>			{System.out.println("PONTUACAO: $");}
+		| <ASPASDUPLAS>		{System.out.println("PONTUACAO: \"");}
+		| <ASPASSIMPLES>	{System.out.println("PONTUACAO: \'");}
+		| <INTERROGACAO>	{System.out.println("PONTUACAO: ?");}
+
+		|	<ACHAVES>		{System.out.println("DELIMITADOR: {");}
+		|	<FCHAVES>		{System.out.println("DELIMITADOR: }");}
+		|	<APAREN> 		{System.out.println("DELIMITADOR: (");}
+		|	<FPAREN> 		{System.out.println("DELIMITADOR: )");}
+		|	<ACOLCHETE>		{System.out.println("DELIMITADOR: [");}
+		|	<FCOLCHETE>		{System.out.println("DELIMITADOR: ]");}
+
+		| t=<NUM>			{System.out.println("NUMERO: " + t.image);}
+		| t=<CADEIA> 	    {System.out.println("CADEIA DE CARACTERES: " + t.image);}
+		| t=<CARACTERE>    {System.out.println("CARACTERES: " + t.image);}
+		
 	)*
 }
