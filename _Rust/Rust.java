@@ -13,17 +13,119 @@ class Rust implements RustConstants {
     label_1:
     while (true) {
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-      case FN:
-      case MAIN:
-      case PRINTLN:
+      case KW_AS:
+      case KW_BREAK:
+      case KW_CONST:
+      case KW_CONTINUE:
+      case KW_CRATE:
+      case KW_ELSE:
+      case KW_ENUM:
+      case KW_EXTERN:
+      case KW_FALSE:
+      case KW_FN:
+      case KW_FOR:
+      case KW_IF:
+      case KW_IMPL:
+      case KW_IN:
+      case KW_LET:
+      case KW_LOOP:
+      case KW_MATCH:
+      case KW_MOD:
+      case KW_MOVE:
+      case KW_MUT:
+      case KW_PUB:
+      case KW_REF:
+      case KW_RETURN:
+      case KW_SELFVALUE:
+      case KW_SELFTYPE:
+      case KW_STATIC:
+      case KW_STRUCT:
+      case KW_SUPER:
+      case KW_TRAIT:
+      case KW_TRUE:
+      case KW_TYPE:
+      case KW_UNSAFE:
+      case KW_USE:
+      case KW_WHERE:
+      case KW_WHILE:
+      case KW_ASYNC:
+      case KW_AWAIT:
+      case KW_DYN:
+      case KW_BOOL:
+      case KW_ABSTRACT:
+      case KW_BECOME:
+      case KW_BOX:
+      case KW_DO:
+      case KW_FINAL:
+      case KW_MACRO:
+      case KW_OVERRIDE:
+      case KW_PRIV:
+      case KW_TYPEOF:
+      case KW_UNSIZED:
+      case KW_VIRTUAL:
+      case KW_YIELD:
+      case KW_TRY:
+      case KW_UNION:
+      case KW_STATICLIFETIME:
+      case MACRO:
       case APAREN:
       case FPAREN:
       case ACHAVES:
       case FCHAVES:
+      case ACOLCHETE:
+      case FCOLCHETE:
+      case MAIS:
+      case MENOS:
+      case ESTRELA:
+      case BARRAINVERTIDA:
+      case PORCENTO:
+      case CHAPEU:
+      case EXCLAMACAO:
+      case ECOMERCIAL:
+      case OU:
+      case ANDAND:
+      case OUOU:
+      case MENORMENOR:
+      case MAIORMAIOR:
+      case MAISIGUAL:
+      case MENOSIGUAL:
+      case ESTRELAIGUAL:
+      case CONTRABARRAIGUAL:
+      case PORCENTOIGUAL:
+      case CHAPEUIGUAL:
+      case ECOMERCIALIGUAL:
+      case OUIGUAL:
+      case MENORMENORIGUAL:
+      case MAIORMAIORIGUAL:
+      case IGUAL:
+      case IGUALIGUAL:
+      case DIFERENTE:
+      case MAIORQUE:
+      case MENORQUE:
+      case MAIOROUIGUAL:
+      case MENOROUIGUAL:
+      case ARROBA:
+      case UNDERLINE:
+      case PONTO:
+      case PONTOPONTO:
+      case PONTOPONTOPONTO:
+      case PONTOPONTOIGUAL:
+      case VIRGULA:
       case PONTOVIRGULA:
+      case DOISPONTOS:
+      case DUPLODOISPONTOS:
+      case SETA:
+      case SETAGORDA:
+      case QUADRADO:
+      case CIFRAO:
       case ASPASDUPLAS:
+      case ASPASSIMPLES:
+      case INTERROGACAO:
       case NUM:
+      case FLOAT:
       case CADEIA:
+      case CARACTERE:
+      case IDENTIFICADOR:
         ;
         break;
       default:
@@ -31,49 +133,457 @@ class Rust implements RustConstants {
         break label_1;
       }
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-      case FN:
-        jj_consume_token(FN);
-                                                 System.out.println("PONTUACAO: fn");
+      case KW_AS:
+        jj_consume_token(KW_AS);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: as");
         break;
-      case MAIN:
-        jj_consume_token(MAIN);
-                                                 System.out.println("PONTUACAO: main");
+      case KW_BREAK:
+        jj_consume_token(KW_BREAK);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: break");
         break;
-      case PRINTLN:
-        jj_consume_token(PRINTLN);
-                                                 System.out.println("PONTUACAO: println!");
+      case KW_CONST:
+        jj_consume_token(KW_CONST);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: const");
         break;
-      case CADEIA:
-        t = jj_consume_token(CADEIA);
-                                     System.out.println(">> CADEIA DE CARACTERES: " + t.image);
+      case KW_CONTINUE:
+        jj_consume_token(KW_CONTINUE);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: continue");
         break;
-      case ASPASDUPLAS:
-        jj_consume_token(ASPASDUPLAS);
-                                         System.out.println(">> ASPAS DUPLAS: \u005c"");
+      case KW_CRATE:
+        jj_consume_token(KW_CRATE);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: crate");
+        break;
+      case KW_ELSE:
+        jj_consume_token(KW_ELSE);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: else");
+        break;
+      case KW_ENUM:
+        jj_consume_token(KW_ENUM);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: enum");
+        break;
+      case KW_EXTERN:
+        jj_consume_token(KW_EXTERN);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: extern");
+        break;
+      case KW_FALSE:
+        jj_consume_token(KW_FALSE);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: false");
+        break;
+      case KW_FN:
+        jj_consume_token(KW_FN);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: fn");
+        break;
+      case KW_FOR:
+        jj_consume_token(KW_FOR);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: for");
+        break;
+      case KW_IF:
+        jj_consume_token(KW_IF);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: if");
+        break;
+      case KW_IMPL:
+        jj_consume_token(KW_IMPL);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: impl");
+        break;
+      case KW_IN:
+        jj_consume_token(KW_IN);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: in");
+        break;
+      case KW_LET:
+        jj_consume_token(KW_LET);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: let");
+        break;
+      case KW_LOOP:
+        jj_consume_token(KW_LOOP);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: loop");
+        break;
+      case KW_MATCH:
+        jj_consume_token(KW_MATCH);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: match");
+        break;
+      case KW_MOD:
+        jj_consume_token(KW_MOD);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: mod");
+        break;
+      case KW_MOVE:
+        jj_consume_token(KW_MOVE);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: move");
+        break;
+      case KW_MUT:
+        jj_consume_token(KW_MUT);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: mut");
+        break;
+      case KW_PUB:
+        jj_consume_token(KW_PUB);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: pub");
+        break;
+      case KW_REF:
+        jj_consume_token(KW_REF);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: ref");
+        break;
+      case KW_RETURN:
+        jj_consume_token(KW_RETURN);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: return");
+        break;
+      case KW_SELFVALUE:
+        jj_consume_token(KW_SELFVALUE);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: self");
+        break;
+      case KW_SELFTYPE:
+        jj_consume_token(KW_SELFTYPE);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: Self");
+        break;
+      case KW_STATIC:
+        jj_consume_token(KW_STATIC);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: static");
+        break;
+      case KW_STRUCT:
+        jj_consume_token(KW_STRUCT);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: struct");
+        break;
+      case KW_SUPER:
+        jj_consume_token(KW_SUPER);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: super");
+        break;
+      case KW_TRAIT:
+        jj_consume_token(KW_TRAIT);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: trait");
+        break;
+      case KW_TRUE:
+        jj_consume_token(KW_TRUE);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: true");
+        break;
+      case KW_TYPE:
+        jj_consume_token(KW_TYPE);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: type");
+        break;
+      case KW_UNSAFE:
+        jj_consume_token(KW_UNSAFE);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: unsafe");
+        break;
+      case KW_USE:
+        jj_consume_token(KW_USE);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: use");
+        break;
+      case KW_WHERE:
+        jj_consume_token(KW_WHERE);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: where");
+        break;
+      case KW_WHILE:
+        jj_consume_token(KW_WHILE);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: while");
+        break;
+      case KW_ASYNC:
+        jj_consume_token(KW_ASYNC);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: async");
+        break;
+      case KW_AWAIT:
+        jj_consume_token(KW_AWAIT);
+                                         System.out.println("PALAVRAS RESERVADAS STRICT: await");
+        break;
+      case KW_DYN:
+        jj_consume_token(KW_DYN);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: dyn");
+        break;
+      case KW_BOOL:
+        jj_consume_token(KW_BOOL);
+                                                 System.out.println("PALAVRAS RESERVADAS STRICT: bool");
+        break;
+      case KW_ABSTRACT:
+        jj_consume_token(KW_ABSTRACT);
+                                         System.out.println("PALAVRAS RESERVADAS RESERVED: abstract");
+        break;
+      case KW_BECOME:
+        jj_consume_token(KW_BECOME);
+                                         System.out.println("PALAVRAS RESERVADAS RESERVED: become");
+        break;
+      case KW_BOX:
+        jj_consume_token(KW_BOX);
+                                                 System.out.println("PALAVRAS RESERVADAS RESERVED: box");
+        break;
+      case KW_DO:
+        jj_consume_token(KW_DO);
+                                                 System.out.println("PALAVRAS RESERVADAS RESERVED: do");
+        break;
+      case KW_FINAL:
+        jj_consume_token(KW_FINAL);
+                                         System.out.println("PALAVRAS RESERVADAS RESERVED: final");
+        break;
+      case KW_MACRO:
+        jj_consume_token(KW_MACRO);
+                                         System.out.println("PALAVRAS RESERVADAS RESERVED: macro");
+        break;
+      case KW_OVERRIDE:
+        jj_consume_token(KW_OVERRIDE);
+                                         System.out.println("PALAVRAS RESERVADAS RESERVED: override");
+        break;
+      case KW_PRIV:
+        jj_consume_token(KW_PRIV);
+                                                 System.out.println("PALAVRAS RESERVADAS RESERVED: priv");
+        break;
+      case KW_TYPEOF:
+        jj_consume_token(KW_TYPEOF);
+                                         System.out.println("PALAVRAS RESERVADAS RESERVED: typeof");
+        break;
+      case KW_UNSIZED:
+        jj_consume_token(KW_UNSIZED);
+                                         System.out.println("PALAVRAS RESERVADAS RESERVED: unsized");
+        break;
+      case KW_VIRTUAL:
+        jj_consume_token(KW_VIRTUAL);
+                                         System.out.println("PALAVRAS RESERVADAS RESERVED: virtual");
+        break;
+      case KW_YIELD:
+        jj_consume_token(KW_YIELD);
+                                         System.out.println("PALAVRAS RESERVADAS RESERVED: yield");
+        break;
+      case KW_TRY:
+        jj_consume_token(KW_TRY);
+                                                 System.out.println("PALAVRAS RESERVADAS RESERVED: try");
+        break;
+      case KW_UNION:
+        jj_consume_token(KW_UNION);
+                                         System.out.println("PALAVRAS RESERVADAS WEAK: union");
+        break;
+      case KW_STATICLIFETIME:
+        jj_consume_token(KW_STATICLIFETIME);
+                                      System.out.println("PALAVRAS RESERVADAS WEAK: 'static");
+        break;
+      case MAIS:
+        jj_consume_token(MAIS);
+                                                 System.out.println("PONTUACAO: +");
+        break;
+      case MENOS:
+        jj_consume_token(MENOS);
+                                                 System.out.println("PONTUACAO: -");
+        break;
+      case ESTRELA:
+        jj_consume_token(ESTRELA);
+                                                 System.out.println("PONTUACAO: *");
+        break;
+      case BARRAINVERTIDA:
+        jj_consume_token(BARRAINVERTIDA);
+                                         System.out.println("PONTUACAO: /");
+        break;
+      case PORCENTO:
+        jj_consume_token(PORCENTO);
+                                         System.out.println("PONTUACAO: %");
+        break;
+      case CHAPEU:
+        jj_consume_token(CHAPEU);
+                                                 System.out.println("PONTUACAO: ^");
+        break;
+      case EXCLAMACAO:
+        jj_consume_token(EXCLAMACAO);
+                                         System.out.println("PONTUACAO: !");
+        break;
+      case ECOMERCIAL:
+        jj_consume_token(ECOMERCIAL);
+                                         System.out.println("PONTUACAO: &");
+        break;
+      case OU:
+        jj_consume_token(OU);
+                                                 System.out.println("PONTUACAO: |");
+        break;
+      case ANDAND:
+        jj_consume_token(ANDAND);
+                                                 System.out.println("PONTUACAO: &&");
+        break;
+      case OUOU:
+        jj_consume_token(OUOU);
+                                                 System.out.println("PONTUACAO: ||");
+        break;
+      case MENORMENOR:
+        jj_consume_token(MENORMENOR);
+                                         System.out.println("PONTUACAO: <<");
+        break;
+      case MAIORMAIOR:
+        jj_consume_token(MAIORMAIOR);
+                                         System.out.println("PONTUACAO: >>");
+        break;
+      case MAISIGUAL:
+        jj_consume_token(MAISIGUAL);
+                                         System.out.println("PONTUACAO: +=");
+        break;
+      case MENOSIGUAL:
+        jj_consume_token(MENOSIGUAL);
+                                         System.out.println("PONTUACAO: -=");
+        break;
+      case ESTRELAIGUAL:
+        jj_consume_token(ESTRELAIGUAL);
+                                         System.out.println("PONTUACAO: *=");
+        break;
+      case CONTRABARRAIGUAL:
+        jj_consume_token(CONTRABARRAIGUAL);
+                                     System.out.println("PONTUACAO: /=");
+        break;
+      case PORCENTOIGUAL:
+        jj_consume_token(PORCENTOIGUAL);
+                                         System.out.println("PONTUACAO: %=");
+        break;
+      case CHAPEUIGUAL:
+        jj_consume_token(CHAPEUIGUAL);
+                                         System.out.println("PONTUACAO: ^=");
+        break;
+      case ECOMERCIALIGUAL:
+        jj_consume_token(ECOMERCIALIGUAL);
+                                         System.out.println("PONTUACAO: &=");
+        break;
+      case OUIGUAL:
+        jj_consume_token(OUIGUAL);
+                                                 System.out.println("PONTUACAO: |=");
+        break;
+      case MENORMENORIGUAL:
+        jj_consume_token(MENORMENORIGUAL);
+                                         System.out.println("PONTUACAO: <<=");
+        break;
+      case MAIORMAIORIGUAL:
+        jj_consume_token(MAIORMAIORIGUAL);
+                                         System.out.println("PONTUACAO: >>=");
+        break;
+      case IGUAL:
+        jj_consume_token(IGUAL);
+                                                 System.out.println("PONTUACAO: =");
+        break;
+      case IGUALIGUAL:
+        jj_consume_token(IGUALIGUAL);
+                                         System.out.println("PONTUACAO: ==");
+        break;
+      case DIFERENTE:
+        jj_consume_token(DIFERENTE);
+                                         System.out.println("PONTUACAO: !=");
+        break;
+      case MAIORQUE:
+        jj_consume_token(MAIORQUE);
+                                         System.out.println("PONTUACAO: >");
+        break;
+      case MENORQUE:
+        jj_consume_token(MENORQUE);
+                                         System.out.println("PONTUACAO: <");
+        break;
+      case MAIOROUIGUAL:
+        jj_consume_token(MAIOROUIGUAL);
+                                         System.out.println("PONTUACAO: >=");
+        break;
+      case MENOROUIGUAL:
+        jj_consume_token(MENOROUIGUAL);
+                                         System.out.println("PONTUACAO: <=");
+        break;
+      case ARROBA:
+        jj_consume_token(ARROBA);
+                                                 System.out.println("PONTUACAO: @");
+        break;
+      case UNDERLINE:
+        jj_consume_token(UNDERLINE);
+                                         System.out.println("PONTUACAO: _");
+        break;
+      case PONTO:
+        jj_consume_token(PONTO);
+                                                 System.out.println("PONTUACAO: .");
+        break;
+      case PONTOPONTO:
+        jj_consume_token(PONTOPONTO);
+                                         System.out.println("PONTUACAO: ..");
+        break;
+      case PONTOPONTOPONTO:
+        jj_consume_token(PONTOPONTOPONTO);
+                                         System.out.println("PONTUACAO: ...");
+        break;
+      case PONTOPONTOIGUAL:
+        jj_consume_token(PONTOPONTOIGUAL);
+                                         System.out.println("PONTUACAO: ..=");
+        break;
+      case VIRGULA:
+        jj_consume_token(VIRGULA);
+                                                 System.out.println("PONTUACAO: ,");
         break;
       case PONTOVIRGULA:
         jj_consume_token(PONTOVIRGULA);
-                                         System.out.println(">> PONTO E VIRGULA: ;");
+                                         System.out.println("PONTUACAO: ;");
+        break;
+      case DOISPONTOS:
+        jj_consume_token(DOISPONTOS);
+                                         System.out.println("PONTUACAO: :");
+        break;
+      case DUPLODOISPONTOS:
+        jj_consume_token(DUPLODOISPONTOS);
+                                         System.out.println("PONTUACAO: ::");
+        break;
+      case SETA:
+        jj_consume_token(SETA);
+                                                 System.out.println("PONTUACAO: ->");
+        break;
+      case SETAGORDA:
+        jj_consume_token(SETAGORDA);
+                                         System.out.println("PONTUACAO: =>");
+        break;
+      case QUADRADO:
+        jj_consume_token(QUADRADO);
+                                         System.out.println("PONTUACAO: #");
+        break;
+      case CIFRAO:
+        jj_consume_token(CIFRAO);
+                                                 System.out.println("PONTUACAO: $");
+        break;
+      case ASPASDUPLAS:
+        jj_consume_token(ASPASDUPLAS);
+                                         System.out.println("PONTUACAO: \u005c"");
+        break;
+      case ASPASSIMPLES:
+        jj_consume_token(ASPASSIMPLES);
+                                         System.out.println("PONTUACAO: \u005c'");
+        break;
+      case INTERROGACAO:
+        jj_consume_token(INTERROGACAO);
+                                         System.out.println("PONTUACAO: ?");
         break;
       case ACHAVES:
         jj_consume_token(ACHAVES);
-                                                 System.out.println(">> ABRE CHAVES: {");
+                                                 System.out.println("DELIMITADOR: {");
         break;
       case FCHAVES:
         jj_consume_token(FCHAVES);
-                                                 System.out.println(">> FECHA CHAVES: }");
+                                                 System.out.println("DELIMITADOR: }");
         break;
       case APAREN:
         jj_consume_token(APAREN);
-                                                 System.out.println(">> ABRE PARENTESES: (");
+                                                 System.out.println("DELIMITADOR: (");
         break;
       case FPAREN:
         jj_consume_token(FPAREN);
-                                                 System.out.println(">> FECHA PARENTESES: )");
+                                                 System.out.println("DELIMITADOR: )");
+        break;
+      case ACOLCHETE:
+        jj_consume_token(ACOLCHETE);
+                                                 System.out.println("DELIMITADOR: [");
+        break;
+      case FCOLCHETE:
+        jj_consume_token(FCOLCHETE);
+                                                 System.out.println("DELIMITADOR: ]");
         break;
       case NUM:
         t = jj_consume_token(NUM);
-                                                 System.out.println(">> NUMERO: " + t.image);
+                                                 System.out.println("NUMERO: " + t.image);
+        break;
+      case FLOAT:
+        t = jj_consume_token(FLOAT);
+                                                 System.out.println("FLOAT: " + t.image);
+        break;
+      case CADEIA:
+        t = jj_consume_token(CADEIA);
+                                     System.out.println("CADEIA DE CARACTERES: " + t.image);
+        break;
+      case MACRO:
+        t = jj_consume_token(MACRO);
+                                     System.out.println("MACRO: " + t.image);
+        break;
+      case CARACTERE:
+        t = jj_consume_token(CARACTERE);
+                                     System.out.println("CARACTERES: " + t.image);
+        break;
+      case IDENTIFICADOR:
+        t = jj_consume_token(IDENTIFICADOR);
+                                    System.out.println("IDENTIFICADOR: " + t.image);
         break;
       default:
         jj_la1[1] = jj_gen;
@@ -95,11 +605,26 @@ class Rust implements RustConstants {
   static private int jj_gen;
   static final private int[] jj_la1 = new int[2];
   static private int[] jj_la1_0;
+  static private int[] jj_la1_1;
+  static private int[] jj_la1_2;
+  static private int[] jj_la1_3;
   static {
       jj_la1_init_0();
+      jj_la1_init_1();
+      jj_la1_init_2();
+      jj_la1_init_3();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0x164fe,0x164fe,};
+      jj_la1_0 = new int[] {0xfffffffe,0xfffffffe,};
+   }
+   private static void jj_la1_init_1() {
+      jj_la1_1 = new int[] {0xfeffffff,0xfeffffff,};
+   }
+   private static void jj_la1_init_2() {
+      jj_la1_2 = new int[] {0xfffffff7,0xfffffff7,};
+   }
+   private static void jj_la1_init_3() {
+      jj_la1_3 = new int[] {0xfffff,0xfffff,};
    }
 
   /** Constructor with InputStream. */
@@ -237,7 +762,7 @@ class Rust implements RustConstants {
   /** Generate ParseException. */
   static public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[23];
+    boolean[] la1tokens = new boolean[120];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -248,10 +773,19 @@ class Rust implements RustConstants {
           if ((jj_la1_0[i] & (1<<j)) != 0) {
             la1tokens[j] = true;
           }
+          if ((jj_la1_1[i] & (1<<j)) != 0) {
+            la1tokens[32+j] = true;
+          }
+          if ((jj_la1_2[i] & (1<<j)) != 0) {
+            la1tokens[64+j] = true;
+          }
+          if ((jj_la1_3[i] & (1<<j)) != 0) {
+            la1tokens[96+j] = true;
+          }
         }
       }
     }
-    for (int i = 0; i < 23; i++) {
+    for (int i = 0; i < 120; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;
@@ -272,16 +806,5 @@ class Rust implements RustConstants {
   /** Disable tracing. */
   static final public void disable_tracing() {
   }
-
-        // [ ]
-        // Sobre caracteres especiais como '!', tem que tratar fora do a-z, e ler o manual da linguagem pra saber
-        // tudo que pode ser inserido numa string.
-
-        // [OK]
-        // A impressão é por saída padrão, então o algoritmo vai ler o arquivo com um código em Rust,
-        // após isso ele identifica cada token.
-
-        // [ ]
-        // Qual asnixxx tem no rust? tomar cuidado pra não fazer mais do que se pede no trabalho!!!!
 
 }

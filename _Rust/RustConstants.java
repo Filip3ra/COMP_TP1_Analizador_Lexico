@@ -9,41 +9,235 @@ public interface RustConstants {
   /** End of File. */
   int EOF = 0;
   /** RegularExpression Id. */
-  int FN = 1;
+  int KW_AS = 1;
   /** RegularExpression Id. */
-  int MAIN = 2;
+  int KW_BREAK = 2;
   /** RegularExpression Id. */
-  int PRINTLN = 3;
+  int KW_CONST = 3;
   /** RegularExpression Id. */
-  int APAREN = 4;
+  int KW_CONTINUE = 4;
   /** RegularExpression Id. */
-  int FPAREN = 5;
+  int KW_CRATE = 5;
   /** RegularExpression Id. */
-  int ACHAVES = 6;
+  int KW_ELSE = 6;
   /** RegularExpression Id. */
-  int FCHAVES = 7;
+  int KW_ENUM = 7;
   /** RegularExpression Id. */
-  int ACOLCHETE = 8;
+  int KW_EXTERN = 8;
   /** RegularExpression Id. */
-  int FCOLCHETE = 9;
+  int KW_FALSE = 9;
   /** RegularExpression Id. */
-  int PONTOVIRGULA = 10;
+  int KW_FN = 10;
   /** RegularExpression Id. */
-  int VIRGULA = 11;
+  int KW_FOR = 11;
   /** RegularExpression Id. */
-  int PONTO = 12;
+  int KW_IF = 12;
   /** RegularExpression Id. */
-  int ASPASDUPLAS = 13;
+  int KW_IMPL = 13;
   /** RegularExpression Id. */
-  int NUM = 14;
+  int KW_IN = 14;
   /** RegularExpression Id. */
-  int DECIMAL = 15;
+  int KW_LET = 15;
   /** RegularExpression Id. */
-  int CADEIA = 16;
+  int KW_LOOP = 16;
   /** RegularExpression Id. */
-  int CARACTERE = 17;
+  int KW_MATCH = 17;
   /** RegularExpression Id. */
-  int DOISPONTOS = 18;
+  int KW_MOD = 18;
+  /** RegularExpression Id. */
+  int KW_MOVE = 19;
+  /** RegularExpression Id. */
+  int KW_MUT = 20;
+  /** RegularExpression Id. */
+  int KW_PUB = 21;
+  /** RegularExpression Id. */
+  int KW_REF = 22;
+  /** RegularExpression Id. */
+  int KW_RETURN = 23;
+  /** RegularExpression Id. */
+  int KW_SELFVALUE = 24;
+  /** RegularExpression Id. */
+  int KW_SELFTYPE = 25;
+  /** RegularExpression Id. */
+  int KW_STATIC = 26;
+  /** RegularExpression Id. */
+  int KW_STRUCT = 27;
+  /** RegularExpression Id. */
+  int KW_SUPER = 28;
+  /** RegularExpression Id. */
+  int KW_TRAIT = 29;
+  /** RegularExpression Id. */
+  int KW_TRUE = 30;
+  /** RegularExpression Id. */
+  int KW_TYPE = 31;
+  /** RegularExpression Id. */
+  int KW_UNSAFE = 32;
+  /** RegularExpression Id. */
+  int KW_USE = 33;
+  /** RegularExpression Id. */
+  int KW_WHERE = 34;
+  /** RegularExpression Id. */
+  int KW_WHILE = 35;
+  /** RegularExpression Id. */
+  int KW_ASYNC = 36;
+  /** RegularExpression Id. */
+  int KW_AWAIT = 37;
+  /** RegularExpression Id. */
+  int KW_DYN = 38;
+  /** RegularExpression Id. */
+  int KW_BOOL = 39;
+  /** RegularExpression Id. */
+  int KW_ABSTRACT = 40;
+  /** RegularExpression Id. */
+  int KW_BECOME = 41;
+  /** RegularExpression Id. */
+  int KW_BOX = 42;
+  /** RegularExpression Id. */
+  int KW_DO = 43;
+  /** RegularExpression Id. */
+  int KW_FINAL = 44;
+  /** RegularExpression Id. */
+  int KW_MACRO = 45;
+  /** RegularExpression Id. */
+  int KW_OVERRIDE = 46;
+  /** RegularExpression Id. */
+  int KW_PRIV = 47;
+  /** RegularExpression Id. */
+  int KW_TYPEOF = 48;
+  /** RegularExpression Id. */
+  int KW_UNSIZED = 49;
+  /** RegularExpression Id. */
+  int KW_VIRTUAL = 50;
+  /** RegularExpression Id. */
+  int KW_YIELD = 51;
+  /** RegularExpression Id. */
+  int KW_TRY = 52;
+  /** RegularExpression Id. */
+  int KW_UNION = 53;
+  /** RegularExpression Id. */
+  int KW_STATICLIFETIME = 54;
+  /** RegularExpression Id. */
+  int MACRO = 55;
+  /** RegularExpression Id. */
+  int COMENTARIOLINHA = 56;
+  /** RegularExpression Id. */
+  int APAREN = 57;
+  /** RegularExpression Id. */
+  int FPAREN = 58;
+  /** RegularExpression Id. */
+  int ACHAVES = 59;
+  /** RegularExpression Id. */
+  int FCHAVES = 60;
+  /** RegularExpression Id. */
+  int ACOLCHETE = 61;
+  /** RegularExpression Id. */
+  int FCOLCHETE = 62;
+  /** RegularExpression Id. */
+  int MAIS = 63;
+  /** RegularExpression Id. */
+  int MENOS = 64;
+  /** RegularExpression Id. */
+  int ESTRELA = 65;
+  /** RegularExpression Id. */
+  int BARRAINVERTIDA = 66;
+  /** RegularExpression Id. */
+  int BARRABARRA = 67;
+  /** RegularExpression Id. */
+  int PORCENTO = 68;
+  /** RegularExpression Id. */
+  int CHAPEU = 69;
+  /** RegularExpression Id. */
+  int EXCLAMACAO = 70;
+  /** RegularExpression Id. */
+  int ECOMERCIAL = 71;
+  /** RegularExpression Id. */
+  int OU = 72;
+  /** RegularExpression Id. */
+  int ANDAND = 73;
+  /** RegularExpression Id. */
+  int OUOU = 74;
+  /** RegularExpression Id. */
+  int MENORMENOR = 75;
+  /** RegularExpression Id. */
+  int MAIORMAIOR = 76;
+  /** RegularExpression Id. */
+  int MAISIGUAL = 77;
+  /** RegularExpression Id. */
+  int MENOSIGUAL = 78;
+  /** RegularExpression Id. */
+  int ESTRELAIGUAL = 79;
+  /** RegularExpression Id. */
+  int CONTRABARRAIGUAL = 80;
+  /** RegularExpression Id. */
+  int PORCENTOIGUAL = 81;
+  /** RegularExpression Id. */
+  int CHAPEUIGUAL = 82;
+  /** RegularExpression Id. */
+  int ECOMERCIALIGUAL = 83;
+  /** RegularExpression Id. */
+  int OUIGUAL = 84;
+  /** RegularExpression Id. */
+  int MENORMENORIGUAL = 85;
+  /** RegularExpression Id. */
+  int MAIORMAIORIGUAL = 86;
+  /** RegularExpression Id. */
+  int IGUAL = 87;
+  /** RegularExpression Id. */
+  int IGUALIGUAL = 88;
+  /** RegularExpression Id. */
+  int DIFERENTE = 89;
+  /** RegularExpression Id. */
+  int MAIORQUE = 90;
+  /** RegularExpression Id. */
+  int MENORQUE = 91;
+  /** RegularExpression Id. */
+  int MAIOROUIGUAL = 92;
+  /** RegularExpression Id. */
+  int MENOROUIGUAL = 93;
+  /** RegularExpression Id. */
+  int ARROBA = 94;
+  /** RegularExpression Id. */
+  int UNDERLINE = 95;
+  /** RegularExpression Id. */
+  int PONTO = 96;
+  /** RegularExpression Id. */
+  int PONTOPONTO = 97;
+  /** RegularExpression Id. */
+  int PONTOPONTOPONTO = 98;
+  /** RegularExpression Id. */
+  int PONTOPONTOIGUAL = 99;
+  /** RegularExpression Id. */
+  int VIRGULA = 100;
+  /** RegularExpression Id. */
+  int PONTOVIRGULA = 101;
+  /** RegularExpression Id. */
+  int DOISPONTOS = 102;
+  /** RegularExpression Id. */
+  int DUPLODOISPONTOS = 103;
+  /** RegularExpression Id. */
+  int SETA = 104;
+  /** RegularExpression Id. */
+  int SETAGORDA = 105;
+  /** RegularExpression Id. */
+  int QUADRADO = 106;
+  /** RegularExpression Id. */
+  int CIFRAO = 107;
+  /** RegularExpression Id. */
+  int ASPASDUPLAS = 108;
+  /** RegularExpression Id. */
+  int ASPASSIMPLES = 109;
+  /** RegularExpression Id. */
+  int INTERROGACAO = 110;
+  /** RegularExpression Id. */
+  int NUM = 111;
+  /** RegularExpression Id. */
+  int FLOAT = 112;
+  /** RegularExpression Id. */
+  int CADEIA = 113;
+  /** RegularExpression Id. */
+  int CARACTERE = 114;
+  /** RegularExpression Id. */
+  int IDENTIFICADOR = 115;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -51,24 +245,121 @@ public interface RustConstants {
   /** Literal token values. */
   String[] tokenImage = {
     "<EOF>",
+    "\"as\"",
+    "\"break\"",
+    "\"const\"",
+    "\"continue\"",
+    "\"crate\"",
+    "\"else\"",
+    "\"enum\"",
+    "\"extern\"",
+    "\"false\"",
     "\"fn\"",
-    "\"main\"",
-    "\"println!\"",
+    "\"for\"",
+    "\"if\"",
+    "\"impl\"",
+    "\"in\"",
+    "\"let\"",
+    "\"loop\"",
+    "\"match\"",
+    "\"mod\"",
+    "\"move\"",
+    "\"mut\"",
+    "\"pub\"",
+    "\"ref\"",
+    "\"return\"",
+    "\"self\"",
+    "\"Self\"",
+    "\"static\"",
+    "\"struct\"",
+    "\"super\"",
+    "\"trait\"",
+    "\"true\"",
+    "\"type\"",
+    "\"unsafe\"",
+    "\"use\"",
+    "\"where\"",
+    "\"while\"",
+    "\"async\"",
+    "\"await\"",
+    "\"dyn\"",
+    "\"bool\"",
+    "\"abstract\"",
+    "\"become\"",
+    "\"box\"",
+    "\"do\"",
+    "\"final\"",
+    "\"macro\"",
+    "\"override\"",
+    "\"priv\"",
+    "\"typeof\"",
+    "\"unsized\"",
+    "\"virtual\"",
+    "\"yield\"",
+    "\"try\"",
+    "\"union\"",
+    "\"\\\'static\"",
+    "<MACRO>",
+    "<COMENTARIOLINHA>",
     "\"(\"",
     "\")\"",
     "\"{\"",
     "\"}\"",
     "\"[\"",
     "\"]\"",
-    "\";\"",
-    "\",\"",
+    "\"+\"",
+    "\"-\"",
+    "\"*\"",
+    "\"/\"",
+    "\"//\"",
+    "\"%\"",
+    "\"^\"",
+    "\"!\"",
+    "\"&\"",
+    "\"|\"",
+    "\"&&\"",
+    "\"||\"",
+    "\"<<\"",
+    "\">>\"",
+    "\"+=\"",
+    "\"-=\"",
+    "\"*=\"",
+    "\"/=\"",
+    "\"%=\"",
+    "\"^=\"",
+    "\"&=\"",
+    "\"|=\"",
+    "\"<<=\"",
+    "\">>=\"",
+    "\"=\"",
+    "\"==\"",
+    "\"!=\"",
+    "\">\"",
+    "\"<\"",
+    "\">=\"",
+    "\"<=\"",
+    "\"@\"",
+    "\"_\"",
     "\".\"",
+    "\"..\"",
+    "\"...\"",
+    "\"..=\"",
+    "\",\"",
+    "\";\"",
+    "\":\"",
+    "\"::\"",
+    "\"->\"",
+    "\"=>\"",
+    "\"#\"",
+    "\"$\"",
     "\"\\\"\"",
+    "\"\\\'\"",
+    "\"?\"",
     "<NUM>",
-    "<DECIMAL>",
+    "<FLOAT>",
     "<CADEIA>",
     "<CARACTERE>",
-    "\":\"",
+    "<IDENTIFICADOR>",
     "\" \"",
     "\"\\n\"",
     "\"\\r\"",

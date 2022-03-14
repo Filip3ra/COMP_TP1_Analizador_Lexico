@@ -1,7 +1,22 @@
+use std::io::stdin;
+
 fn main()
 {
 	println!("Hello World!");
-	123
-	"testando"
+
+	say_hello!();
+
+	let aux = 100;
+
+	let (f_name, l_name) = ("Filipi", "Maciel");
+
+	let mut idade: i32 = 20;
+	println!("Eu tenho {} anos de idade", idade);
+
+	let is_this_true: bool = true;
+	let let_x: char = 'X';
+	println!("It is {0} that {1} is {0}", is_this_true, let_x);
+
+	println!("{:.2}", 1.234);	
+
 }
-teste
