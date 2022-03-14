@@ -1,0 +1,6 @@
+fn main()
+{
+	println!("Hello World!");
+	123
+	"testando"
+}
