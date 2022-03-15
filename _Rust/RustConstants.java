@@ -85,33 +85,33 @@ public interface RustConstants {
   /** RegularExpression Id. */
   int KW_DYN = 38;
   /** RegularExpression Id. */
-  int KW_BOOL = 39;
+  int KW_ABSTRACT = 39;
   /** RegularExpression Id. */
-  int KW_ABSTRACT = 40;
+  int KW_BECOME = 40;
   /** RegularExpression Id. */
-  int KW_BECOME = 41;
+  int KW_BOX = 41;
   /** RegularExpression Id. */
-  int KW_BOX = 42;
+  int KW_DO = 42;
   /** RegularExpression Id. */
-  int KW_DO = 43;
+  int KW_FINAL = 43;
   /** RegularExpression Id. */
-  int KW_FINAL = 44;
+  int KW_MACRO = 44;
   /** RegularExpression Id. */
-  int KW_MACRO = 45;
+  int KW_OVERRIDE = 45;
   /** RegularExpression Id. */
-  int KW_OVERRIDE = 46;
+  int KW_PRIV = 46;
   /** RegularExpression Id. */
-  int KW_PRIV = 47;
+  int KW_TYPEOF = 47;
   /** RegularExpression Id. */
-  int KW_TYPEOF = 48;
+  int KW_UNSIZED = 48;
   /** RegularExpression Id. */
-  int KW_UNSIZED = 49;
+  int KW_VIRTUAL = 49;
   /** RegularExpression Id. */
-  int KW_VIRTUAL = 50;
+  int KW_YIELD = 50;
   /** RegularExpression Id. */
-  int KW_YIELD = 51;
+  int KW_TRY = 51;
   /** RegularExpression Id. */
-  int KW_TRY = 52;
+  int BOOLEANO = 52;
   /** RegularExpression Id. */
   int KW_UNION = 53;
   /** RegularExpression Id. */
@@ -119,125 +119,123 @@ public interface RustConstants {
   /** RegularExpression Id. */
   int MACRO = 55;
   /** RegularExpression Id. */
-  int COMENTARIOLINHA = 56;
+  int APAREN = 56;
   /** RegularExpression Id. */
-  int APAREN = 57;
+  int FPAREN = 57;
   /** RegularExpression Id. */
-  int FPAREN = 58;
+  int ACHAVES = 58;
   /** RegularExpression Id. */
-  int ACHAVES = 59;
+  int FCHAVES = 59;
   /** RegularExpression Id. */
-  int FCHAVES = 60;
+  int ACOLCHETE = 60;
   /** RegularExpression Id. */
-  int ACOLCHETE = 61;
+  int FCOLCHETE = 61;
   /** RegularExpression Id. */
-  int FCOLCHETE = 62;
+  int MAIS = 62;
   /** RegularExpression Id. */
-  int MAIS = 63;
+  int MENOS = 63;
   /** RegularExpression Id. */
-  int MENOS = 64;
+  int ESTRELA = 64;
   /** RegularExpression Id. */
-  int ESTRELA = 65;
+  int BARRAINVERTIDA = 65;
   /** RegularExpression Id. */
-  int BARRAINVERTIDA = 66;
+  int BARRABARRA = 66;
   /** RegularExpression Id. */
-  int BARRABARRA = 67;
+  int PORCENTO = 67;
   /** RegularExpression Id. */
-  int PORCENTO = 68;
+  int CHAPEU = 68;
   /** RegularExpression Id. */
-  int CHAPEU = 69;
+  int EXCLAMACAO = 69;
   /** RegularExpression Id. */
-  int EXCLAMACAO = 70;
+  int ECOMERCIAL = 70;
   /** RegularExpression Id. */
-  int ECOMERCIAL = 71;
+  int OU = 71;
   /** RegularExpression Id. */
-  int OU = 72;
+  int ANDAND = 72;
   /** RegularExpression Id. */
-  int ANDAND = 73;
+  int OUOU = 73;
   /** RegularExpression Id. */
-  int OUOU = 74;
+  int MENORMENOR = 74;
   /** RegularExpression Id. */
-  int MENORMENOR = 75;
+  int MAIORMAIOR = 75;
   /** RegularExpression Id. */
-  int MAIORMAIOR = 76;
+  int MAISIGUAL = 76;
   /** RegularExpression Id. */
-  int MAISIGUAL = 77;
+  int MENOSIGUAL = 77;
   /** RegularExpression Id. */
-  int MENOSIGUAL = 78;
+  int ESTRELAIGUAL = 78;
   /** RegularExpression Id. */
-  int ESTRELAIGUAL = 79;
+  int CONTRABARRAIGUAL = 79;
   /** RegularExpression Id. */
-  int CONTRABARRAIGUAL = 80;
+  int PORCENTOIGUAL = 80;
   /** RegularExpression Id. */
-  int PORCENTOIGUAL = 81;
+  int CHAPEUIGUAL = 81;
   /** RegularExpression Id. */
-  int CHAPEUIGUAL = 82;
+  int ECOMERCIALIGUAL = 82;
   /** RegularExpression Id. */
-  int ECOMERCIALIGUAL = 83;
+  int OUIGUAL = 83;
   /** RegularExpression Id. */
-  int OUIGUAL = 84;
+  int MENORMENORIGUAL = 84;
   /** RegularExpression Id. */
-  int MENORMENORIGUAL = 85;
+  int MAIORMAIORIGUAL = 85;
   /** RegularExpression Id. */
-  int MAIORMAIORIGUAL = 86;
+  int IGUAL = 86;
   /** RegularExpression Id. */
-  int IGUAL = 87;
+  int IGUALIGUAL = 87;
   /** RegularExpression Id. */
-  int IGUALIGUAL = 88;
+  int DIFERENTE = 88;
   /** RegularExpression Id. */
-  int DIFERENTE = 89;
+  int MAIORQUE = 89;
   /** RegularExpression Id. */
-  int MAIORQUE = 90;
+  int MENORQUE = 90;
   /** RegularExpression Id. */
-  int MENORQUE = 91;
+  int MAIOROUIGUAL = 91;
   /** RegularExpression Id. */
-  int MAIOROUIGUAL = 92;
+  int MENOROUIGUAL = 92;
   /** RegularExpression Id. */
-  int MENOROUIGUAL = 93;
+  int ARROBA = 93;
   /** RegularExpression Id. */
-  int ARROBA = 94;
+  int UNDERLINE = 94;
   /** RegularExpression Id. */
-  int UNDERLINE = 95;
+  int PONTO = 95;
   /** RegularExpression Id. */
-  int PONTO = 96;
+  int PONTOPONTO = 96;
   /** RegularExpression Id. */
-  int PONTOPONTO = 97;
+  int PONTOPONTOPONTO = 97;
   /** RegularExpression Id. */
-  int PONTOPONTOPONTO = 98;
+  int PONTOPONTOIGUAL = 98;
   /** RegularExpression Id. */
-  int PONTOPONTOIGUAL = 99;
+  int VIRGULA = 99;
   /** RegularExpression Id. */
-  int VIRGULA = 100;
+  int PONTOVIRGULA = 100;
   /** RegularExpression Id. */
-  int PONTOVIRGULA = 101;
+  int DOISPONTOS = 101;
   /** RegularExpression Id. */
-  int DOISPONTOS = 102;
+  int DUPLODOISPONTOS = 102;
   /** RegularExpression Id. */
-  int DUPLODOISPONTOS = 103;
+  int SETA = 103;
   /** RegularExpression Id. */
-  int SETA = 104;
+  int SETAGORDA = 104;
   /** RegularExpression Id. */
-  int SETAGORDA = 105;
+  int QUADRADO = 105;
   /** RegularExpression Id. */
-  int QUADRADO = 106;
+  int CIFRAO = 106;
   /** RegularExpression Id. */
-  int CIFRAO = 107;
+  int ASPASDUPLAS = 107;
   /** RegularExpression Id. */
-  int ASPASDUPLAS = 108;
+  int ASPASSIMPLES = 108;
   /** RegularExpression Id. */
-  int ASPASSIMPLES = 109;
+  int INTERROGACAO = 109;
   /** RegularExpression Id. */
-  int INTERROGACAO = 110;
+  int NUM = 110;
   /** RegularExpression Id. */
-  int NUM = 111;
+  int FLOAT = 111;
   /** RegularExpression Id. */
-  int FLOAT = 112;
+  int CADEIA = 112;
   /** RegularExpression Id. */
-  int CADEIA = 113;
+  int CARACTERE = 113;
   /** RegularExpression Id. */
-  int CARACTERE = 114;
-  /** RegularExpression Id. */
-  int IDENTIFICADOR = 115;
+  int IDENTIFICADOR = 114;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -283,7 +281,6 @@ public interface RustConstants {
     "\"async\"",
     "\"await\"",
     "\"dyn\"",
-    "\"bool\"",
     "\"abstract\"",
     "\"become\"",
     "\"box\"",
@@ -297,10 +294,10 @@ public interface RustConstants {
     "\"virtual\"",
     "\"yield\"",
     "\"try\"",
+    "\"bool\"",
     "\"union\"",
     "\"\\\'static\"",
     "<MACRO>",
-    "<COMENTARIOLINHA>",
     "\"(\"",
     "\")\"",
     "\"{\"",

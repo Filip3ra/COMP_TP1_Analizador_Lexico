@@ -5,7 +5,6 @@ class Rust implements RustConstants {
         {
                 Rust lex = new Rust(new FileInputStream(args[0]));
                 lex.AnaliseLexica();
-
         }
 
   static final public void AnaliseLexica() throws ParseException {
@@ -51,7 +50,6 @@ class Rust implements RustConstants {
       case KW_ASYNC:
       case KW_AWAIT:
       case KW_DYN:
-      case KW_BOOL:
       case KW_ABSTRACT:
       case KW_BECOME:
       case KW_BOX:
@@ -65,6 +63,7 @@ class Rust implements RustConstants {
       case KW_VIRTUAL:
       case KW_YIELD:
       case KW_TRY:
+      case BOOLEANO:
       case KW_UNION:
       case KW_STATICLIFETIME:
       case MACRO:
@@ -284,10 +283,6 @@ class Rust implements RustConstants {
       case KW_DYN:
         jj_consume_token(KW_DYN);
                                                  System.out.println("PALAVRAS RESERVADAS STRICT: dyn");
-        break;
-      case KW_BOOL:
-        jj_consume_token(KW_BOOL);
-                                                 System.out.println("PALAVRAS RESERVADAS STRICT: bool");
         break;
       case KW_ABSTRACT:
         jj_consume_token(KW_ABSTRACT);
@@ -561,17 +556,21 @@ class Rust implements RustConstants {
         jj_consume_token(FCOLCHETE);
                                                  System.out.println("DELIMITADOR: ]");
         break;
+      case BOOLEANO:
+        jj_consume_token(BOOLEANO);
+                                         System.out.println("BOLEANO: bool");
+        break;
       case NUM:
         t = jj_consume_token(NUM);
-                                                 System.out.println("NUMERO: " + t.image);
+                                                 System.out.println("NUMERICO: " + t.image);
         break;
       case FLOAT:
         t = jj_consume_token(FLOAT);
-                                                 System.out.println("FLOAT: " + t.image);
+                                                 System.out.println("NUMERICO: " + t.image);
         break;
       case CADEIA:
         t = jj_consume_token(CADEIA);
-                                     System.out.println("CADEIA DE CARACTERES: " + t.image);
+                                     System.out.println("TEXTUAL: " + t.image);
         break;
       case MACRO:
         t = jj_consume_token(MACRO);
@@ -579,7 +578,7 @@ class Rust implements RustConstants {
         break;
       case CARACTERE:
         t = jj_consume_token(CARACTERE);
-                                     System.out.println("CARACTERES: " + t.image);
+                                     System.out.println("TEXTUAL: " + t.image);
         break;
       case IDENTIFICADOR:
         t = jj_consume_token(IDENTIFICADOR);
@@ -618,13 +617,13 @@ class Rust implements RustConstants {
       jj_la1_0 = new int[] {0xfffffffe,0xfffffffe,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0xfeffffff,0xfeffffff,};
+      jj_la1_1 = new int[] {0xffffffff,0xffffffff,};
    }
    private static void jj_la1_init_2() {
-      jj_la1_2 = new int[] {0xfffffff7,0xfffffff7,};
+      jj_la1_2 = new int[] {0xfffffffb,0xfffffffb,};
    }
    private static void jj_la1_init_3() {
-      jj_la1_3 = new int[] {0xfffff,0xfffff,};
+      jj_la1_3 = new int[] {0x7ffff,0x7ffff,};
    }
 
   /** Constructor with InputStream. */
@@ -762,7 +761,7 @@ class Rust implements RustConstants {
   /** Generate ParseException. */
   static public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[120];
+    boolean[] la1tokens = new boolean[119];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -785,7 +784,7 @@ class Rust implements RustConstants {
         }
       }
     }
-    for (int i = 0; i < 120; i++) {
+    for (int i = 0; i < 119; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;

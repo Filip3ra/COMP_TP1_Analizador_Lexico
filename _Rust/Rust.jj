@@ -1,3 +1,9 @@
+/*************************************
+ * Autor: Filipi Maciel              *
+ * Último modfi: 14/03/2022          *
+ ************************************/
+
+
 PARSER_BEGIN(Rust)
 import java.io.*;
 class Rust 
@@ -5,21 +11,10 @@ class Rust
 	public static void main( String[] args )throws ParseException, Exception
 	{
 		Rust lex = new Rust(new FileInputStream(args[0]));
-		lex.AnaliseLexica();
-		
+		lex.AnaliseLexica();		
 	}
-
-
 }
 PARSER_END(Rust)
-
-
-/*
-	> Não está pegando int num
-	> Não detecta comentários
-	> Não tem número float
-
-*/
 
 
 
@@ -73,7 +68,6 @@ TOKEN:
 	| <KW_ASYNC : "async">
 	| <KW_AWAIT : "await">
 	| <KW_DYN : "dyn">
-	| <KW_BOOL : "bool">
 }
 
 
@@ -95,11 +89,12 @@ TOKEN:
 	| <KW_VIRTUAL : "virtual">
 	| <KW_YIELD : "yield">
 	| <KW_TRY : "try">
+	| <BOOLEANO : "bool">
 }
 
 
 /******************************
- * PALAVRAS RESERVADAS: WEAK  *
+* PALAVRAS RESERVADAS: WEAK  *
  ******************************/
 TOKEN:
 {
@@ -114,15 +109,6 @@ TOKEN:
 TOKEN:
 {
 	  <MACRO: ["a"-"z","A"-"Z","0"-"9","_"](["a"-"z","A"-"Z","0"-"9","_"])*<EXCLAMACAO>>	
-}
-
-
-/***************** não funciona
- *  COMENTARIOS  *
- *****************/
-TOKEN:
-{
-	  <COMENTARIOLINHA: <BARRABARRA><CADEIA> >	
 }
 
 
@@ -197,20 +183,20 @@ TOKEN:
 }
 
 
-/*************************************
- * IDENTIFICADORES, NUMEROS, STRINGS *
- *************************************/
+
+/**********************************************************
+ * IDENTIFICADORES, NUMEROS, FLOAT, CADEIA DE CARACTERES  *
+ **********************************************************/
 TOKEN:
 {
 	  <NUM : (["0"-"9"])+>
 	| <FLOAT : (["0"-"9"])+["."](["0"-"9"])+>
 	| <CADEIA : <ASPASDUPLAS>
-	  (["a"-"z","A"-"Z","0"-"9"," ",":",";",".","!","@","#","$","%","&","*","{","}"])*<ASPASDUPLAS>>
+	  (["a"-"z","A"-"Z","0"-"9"," ",":",";",".","!","=","^","@","#","$","%","&","*",")","(","{","}",">","<","[","]"])*<ASPASDUPLAS>>
 	| <CARACTERE : "'"["a"-"z","A"-"Z","0"-"9"]"'" >
 	| <IDENTIFICADOR : (["a"-"z","A"-"Z"]) (["a"-"z","A"-"Z","0"-"9","_"])*>
+	
 }
-
-
 
 
 /**********************
@@ -220,6 +206,7 @@ SKIP :
 { 
 	" " | "\n" | "\r" | "\t" 
 }
+
 
 void AnaliseLexica() :
 {Token t;}
@@ -263,7 +250,6 @@ void AnaliseLexica() :
 		| <KW_ASYNC>		{System.out.println("PALAVRAS RESERVADAS STRICT: async");}
 		| <KW_AWAIT>		{System.out.println("PALAVRAS RESERVADAS STRICT: await");}
 		| <KW_DYN>			{System.out.println("PALAVRAS RESERVADAS STRICT: dyn");}
-		| <KW_BOOL>			{System.out.println("PALAVRAS RESERVADAS STRICT: bool");}
 
 		| <KW_ABSTRACT>		{System.out.println("PALAVRAS RESERVADAS RESERVED: abstract");}
 		| <KW_BECOME>		{System.out.println("PALAVRAS RESERVADAS RESERVED: become");}
@@ -337,11 +323,12 @@ void AnaliseLexica() :
 		|	<ACOLCHETE>		{System.out.println("DELIMITADOR: [");}
 		|	<FCOLCHETE>		{System.out.println("DELIMITADOR: ]");}
 
-		| t=<NUM>			{System.out.println("NUMERO: " + t.image);}
-		| t=<FLOAT>			{System.out.println("FLOAT: " + t.image);}
-		| t=<CADEIA> 	    {System.out.println("CADEIA DE CARACTERES: " + t.image);}
+		| <BOOLEANO>		{System.out.println("BOLEANO: bool");}
+		| t=<NUM>			{System.out.println("NUMERICO: " + t.image);}
+		| t=<FLOAT>			{System.out.println("NUMERICO: " + t.image);}
+		| t=<CADEIA> 	    {System.out.println("TEXTUAL: " + t.image);}
 		| t=<MACRO> 	    {System.out.println("MACRO: " + t.image);}
-		| t=<CARACTERE>     {System.out.println("CARACTERES: " + t.image);}
+		| t=<CARACTERE>     {System.out.println("TEXTUAL: " + t.image);}
 		| t=<IDENTIFICADOR>{System.out.println("IDENTIFICADOR: " + t.image);}
 		
 	)*
